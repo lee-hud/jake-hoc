@@ -1,0 +1,28 @@
+{
+  "vocabulary": {
+    "name": "Danh sách HSK 2.0 sáu cấp CTI, workbook HSK-2012",
+    "url": "https://www.chinesetest.cn/userfiles/file/HSK/HSK-2012.xls",
+    "note": "Danh sách gốc gồm 5.000 mục, theo các cấp mới 150 / 150 / 300 / 600 / 1.300 / 2.500."
+  },
+  "enrichment": {
+    "name": "HSK Vocabulary Dataset by chinese-typing-practice.com",
+    "url": "https://chinese-typing-practice.com/data/",
+    "license": "CC BY 4.0",
+    "note": "Dùng để bổ sung pinyin, từ loại và gloss. Các gloss mở rộng dựa trên CC-CEDICT được ghi công riêng và theo thông báo CC BY-SA 4.0."
+  },
+  "dictionary": {
+    "name": "CC-CEDICT",
+    "url": "https://cc-cedict.org/",
+    "license": "CC BY-SA 4.0"
+  },
+  "audio": {
+    "name": "hugolpz/audio-cmn · Anki-xiehanzi Old HSK 2012",
+    "url": "https://github.com/hugolpz/audio-cmn",
+    "license": "CC BY-SA 4.0",
+    "credits": "Bản ghi được ghi công Yue Tan/Shtooka trong thông tin giấy phép của dự án Anki-xiehanzi.",
+    "licenseUrl": "https://github.com/krmanik/Anki-xiehanzi/blob/main/License.md",
+    "note": "Bốn mẫu câu ellipsis được ghép từ các bản ghi riêng lẻ của những thành phần câu, với khoảng ngắt ngắn; các từ còn lại dùng bản ghi từ."
+  },
+  "translation": "Nghĩa tiếng Việt được dịch tự động từ gloss tiếng Anh; có thể rút gọn hoặc thiếu sắc thái. Đối chiếu từ điển khi cần độ chính xác chuyên sâu.",
+  "standard": "HSK 2.0 sáu cấp cũ, không phải HSK 3.0 chín cấp."
+}
