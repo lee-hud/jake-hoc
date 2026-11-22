@@ -1,0 +1,38 @@
+{
+  "1": {
+    "count": 150,
+    "bytes": 481117,
+    "downloadMB": 0.5,
+    "path": "/audio/hsk1.zip"
+  },
+  "2": {
+    "count": 150,
+    "bytes": 535366,
+    "downloadMB": 0.5,
+    "path": "/audio/hsk2.zip"
+  },
+  "3": {
+    "count": 300,
+    "bytes": 1060166,
+    "downloadMB": 1.0,
+    "path": "/audio/hsk3.zip"
+  },
+  "4": {
+    "count": 600,
+    "bytes": 2131887,
+    "downloadMB": 2.0,
+    "path": "/audio/hsk4.zip"
+  },
+  "5": {
+    "count": 1300,
+    "bytes": 4676589,
+    "downloadMB": 4.5,
+    "path": "/audio/hsk5.zip"
+  },
+  "6": {
+    "count": 2500,
+    "bytes": 9318625,
+    "downloadMB": 8.9,
+    "path": "/audio/hsk6.zip"
+  }
+}
