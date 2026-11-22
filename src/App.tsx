@@ -77,8 +77,8 @@ function App() {
     setLoadError('')
     try {
       const [vocabResponse, audioResponse] = await Promise.all([
-        fetch('/data/vocab.json'),
-        fetch('/data/audio-sizes.json'),
+        fetch(`${import.meta.env.BASE_URL}data/vocab.json`),
+        fetch(`${import.meta.env.BASE_URL}data/audio-sizes.json`),
       ])
       if (!vocabResponse.ok || !audioResponse.ok) throw new Error('Không tải được bộ dữ liệu HSK.')
       const [vocab, sizes] = await Promise.all([vocabResponse.json(), audioResponse.json()]) as [VocabItem[], Record<string, AudioPackInfo>]

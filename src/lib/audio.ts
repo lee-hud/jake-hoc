@@ -7,7 +7,7 @@ let player: HTMLAudioElement | null = null
 async function loadPack(level: number): Promise<Record<string, Uint8Array>> {
   const existing = packPromises.get(level)
   if (existing) return existing
-  const pending = fetch(`/audio/hsk${level}.zip`).then(async (response) => {
+  const pending = fetch(`${import.meta.env.BASE_URL}audio/hsk${level}.zip`).then(async (response) => {
     if (!response.ok) throw new Error(`Không tải được gói âm thanh HSK ${level}.`)
     const bytes = new Uint8Array(await response.arrayBuffer())
     return unzipSync(bytes)

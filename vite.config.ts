@@ -1,8 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
+import process from 'node:process'
+
+const base = process.env.GITHUB_PAGES === 'true' ? '/jake-hoc/' : '/'
 
 export default defineConfig({
+  base,
   plugins: [
     react(),
     VitePWA({
@@ -16,12 +20,12 @@ export default defineConfig({
         background_color: '#f7f4ec',
         display: 'standalone',
         orientation: 'portrait',
-        scope: '/',
-        start_url: '/',
+        scope: base,
+        start_url: base,
         lang: 'vi',
         icons: [
-          { src: '/icons/icon-192.png', sizes: '192x192', type: 'image/png', purpose: 'any maskable' },
-          { src: '/icons/icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'any maskable' },
+          { src: `${base}icons/icon-192.png`, sizes: '192x192', type: 'image/png', purpose: 'any maskable' },
+          { src: `${base}icons/icon-512.png`, sizes: '512x512', type: 'image/png', purpose: 'any maskable' },
         ],
       },
       workbox: {
@@ -30,7 +34,7 @@ export default defineConfig({
         maximumFileSizeToCacheInBytes: 2 * 1024 * 1024,
         runtimeCaching: [
           {
-            urlPattern: ({ url }) => /^\/audio\/hsk[1-6]\.zip$/.test(url.pathname),
+            urlPattern: ({ url }) => /\/audio\/hsk[1-6]\.zip$/.test(url.pathname),
             handler: 'CacheFirst',
             options: {
               cacheName: 'hanzi-hsk-audio-packs',

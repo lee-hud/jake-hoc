@@ -9,7 +9,7 @@ export function Header({ onInstall, canInstall }: HeaderProps) {
   return (
     <header className="topbar">
       <div className="brand-lockup">
-        <img src="/icons/mark.svg" className="brand-mark" alt="" />
+        <img src={`${import.meta.env.BASE_URL}icons/mark.svg`} className="brand-mark" alt="" />
         <div>
           <div className="brand-name">Jake Học</div>
           <div className="brand-caption">SỔ TAY TỪ VỰNG</div>

@@ -47,6 +47,12 @@ Máy tính và điện thoại có thể cùng Wi-Fi để mở địa chỉ m�
 
 Tính năng luyện phát âm dùng Web Speech API của trình duyệt; mức hỗ trợ khác nhau giữa các trình duyệt và dịch vụ nhận diện có thể cần Internet. Nếu không được hỗ trợ, ứng dụng có chế độ tự đánh giá.
 
+## Triển khai bằng GitHub Pages
+
+Mã nguồn đã hỗ trợ build dưới đường dẫn project site `/jake-hoc/`. GitHub Pages chưa được bật cho repository này; cần thêm workflow GitHub Actions và chọn **Settings → Pages → GitHub Actions** trước khi website xuất hiện tại `https://lee-hud.github.io/jake-hoc/`. Khi được xuất bản, có thể cài PWA từ trình duyệt trên điện thoại; dữ liệu từ vựng và gói phát âm được tải từ website.
+
+GitHub Pages chỉ phục vụ tệp tĩnh. Workflow không chạy backend, mô hình Qwen hay API dịch liên tục; vì vậy dịch trực tiếp vẫn cần một máy chủ/backend mô hình riêng và sẽ chưa hoạt động thật khi chưa cấu hình endpoint.
+
 ## Triển khai online trên máy chủ riêng (Docker)
 
 Gói mã nguồn có sẵn Dockerfile và Docker Compose để build bản production, phục vụ ứng dụng bằng Nginx và cấp HTTPS tự động bằng Caddy. Cần máy chủ Linux có Docker Engine và Docker Compose v2, một domain/subdomain trỏ tới máy chủ, cùng cổng TCP 80/443 mở trên firewall và router. Caddy dùng cổng UDP 443 cho HTTP/3 nếu mạng cho phép.
